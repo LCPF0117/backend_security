@@ -26,6 +26,10 @@ app.use(cors());
 // Routes
 
 app.use("/",counterRoutes);
+app.post('/test', (req, res)=>{
+	console.log('POST recibido:', req.body);
+	res.json({mensaje: 'Funciona'})
+})
 
 // Error handling
 
